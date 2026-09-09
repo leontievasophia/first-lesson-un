@@ -7,7 +7,27 @@
   </head>
   <body>
     <div class="conteiner">
-      <header class="header"></header>
+      <header class="header">
+        <nav class="header-nav">
+          <ul class="header-list">
+            <li class="header-item">
+              <a class="header-link" href="#education">Освіта</a>
+            </li>
+
+            <li class="header-item">
+              <a class="header-link" href="#skils">Навички</a>
+            </li>
+
+            <li class="header-item">
+              <a class="header-link" href="#travel">Подорожі</a>
+            </li>
+
+            <li class="header-item">
+              <a class="header-link" href="#contacts">Соціальні мережі</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
       <main>
         <section class="section about">
@@ -32,7 +52,7 @@
           </ul>
         </section>
 
-        <section class="section school">
+        <section class="section school" id="education">
           <h2 class="school-title">Освіта: школа</h2>
           <div class="school-info">
             <h3 class="school-name">Назва школи</h3>
@@ -96,7 +116,7 @@
           </ul>
         </section>
 
-        <section class="section skills">
+        <section class="section skills" id="skills">
           <h2 class="skills-title">Навички</h2>
 
           <div class="skills-content">
@@ -104,10 +124,25 @@
               <h3 class="skills-subtitle">Технічні навички</h3>
 
               <ul class="skills-list">
-                <li class="skills-item">HTML</li>
-                <li class="skills-item">CSS</li>
-                <li class="skills-item">JavaScript</li>
-                <li class="skills-item">C#</li>
+                <li class="skills-item">
+                  <span class="skills-name">HTML</span>
+                  <span class="skills-level skills-level-html"></span>
+                </li>
+
+                <li class="skills-item">
+                  <span class="skills-name">CSS</span>
+                  <span class="skills-level skills-level-css"></span>
+                </li>
+
+                <li class="skills-item">
+                  <span class="skills-name">JavaScript</span>
+                  <span class="skills-level skills-level-js"></span>
+                </li>
+
+                <li class="skills-item">
+                  <span class="skills-name">C#</span>
+                  <span class="skills-level skills-level-csharp"></span>
+                </li>
               </ul>
             </div>
 
@@ -115,10 +150,25 @@
               <h3 class="skills-subtitle">М'які навички</h3>
 
               <ul class="skills-list">
-                <li class="skills-item">Комунікабельність</li>
-                <li class="skills-item">Командна робота</li>
-                <li class="skills-item">Відповідальність</li>
-                <li class="skills-item">Організованість</li>
+                <li class="skills-item">
+                  <span class="skills-name">Комунікабельність</span>
+                  <span class="skills-level skills-level-communication"></span>
+                </li>
+
+                <li class="skills-item">
+                  <span class="skills-name">Командна робота</span>
+                  <span class="skills-level skills-level-teamwork"></span>
+                </li>
+
+                <li class="skills-item">
+                  <span class="skills-name">Відповідальність</span>
+                  <span class="skills-level skills-level-responsibility"></span>
+                </li>
+
+                <li class="skills-item">
+                  <span class="skills-name">Організованість</span>
+                  <span class="skills-level skills-level-organization"></span>
+                </li>
               </ul>
             </div>
           </div>
@@ -359,9 +409,153 @@
           </div>
         </section>
 
-        <section class="section movies"></section>
-        <section class="section sports"></section>
-        <section class="section travel"></section>
+        <section class="section movies">
+          <h2 class="movies-title">Улюблені фільми та серіали</h2>
+
+          <div class="movies-list">
+            <article class="movies-card">
+              <img
+                class="movies-image"
+                src="./images/movie-1.jpg"
+                alt="Постер фільму"
+                width="300"
+                height="450"
+                loading="lazy"
+              />
+
+              <h3 class="movies-name">Назва фільму</h3>
+              <p class="movies-year">Рік: 2023</p>
+              <p class="movies-rating">Моя оцінка: 9/10</p>
+            </article>
+
+            <article class="movies-card">
+              <img
+                class="movies-image"
+                src="./images/movie-2.jpg"
+                alt="Постер серіалу"
+                width="300"
+                height="450"
+                loading="lazy"
+              />
+
+              <h3 class="movies-name">Назва серіалу</h3>
+              <p class="movies-year">Рік: 2022</p>
+              <p class="movies-rating">Моя оцінка: 10/10</p>
+            </article>
+
+            <article class="movies-card">
+              <img
+                class="movies-image"
+                src="./images/movie-3.jpg"
+                alt="Постер фільму"
+                width="300"
+                height="450"
+                loading="lazy"
+              />
+
+              <h3 class="movies-name">Назва фільму</h3>
+              <p class="movies-year">Рік: 2024</p>
+              <p class="movies-rating">Моя оцінка: 8/10</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section sport">
+          <h2 class="sport-title">Спорт та активності</h2>
+          <div class="sport-content">
+            <img
+              class="sport-image"
+              src="./images/sport.jpg"
+              alt="Моє заняття спортом"
+              width="500"
+              height="350"
+              loading="lazy"
+            />
+
+            <div class="sport-info">
+              <h3 class="sport-name">Тренування у спортзалі</h3>
+
+              <p class="sport-text">
+                Я займаюся у спортзалі, оскільки спорт допомагає мені
+                підтримувати фізичну форму, покращувати самопочуття та
+                відпочивати від навчання. Моє головне досягнення — регулярність
+                тренувань та поступове покращення своїх результатів.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section travel" id="travel">
+          <h2 class="travel-title">Подорожі та місця</h2>
+
+          <div class="travel-content">
+            <div class="travel-part">
+              <h3 class="travel-subtitle">Закордон</h3>
+
+              <div class="travel-gallery">
+                <figure class="travel-item">
+                  <img
+                    class="travel-image"
+                    src="./images/travel-abroad-1.jpg"
+                    alt="Моя подорож за кордон"
+                    width="500"
+                    height="350"
+                    loading="lazy"
+                  />
+                  <figcaption class="travel-caption">Подорож до</figcaption>
+                </figure>
+
+                <figure class="travel-item">
+                  <img
+                    class="travel-image"
+                    src="./images/travel-abroad-2.jpg"
+                    alt="Моя подорож за кордон"
+                    width="500"
+                    height="350"
+                    loading="lazy"
+                  />
+                  <figcaption class="travel-caption">
+                    Відпочинок за кордоном
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="travel-part">
+              <h3 class="travel-subtitle">Карпати</h3>
+
+              <div class="travel-gallery">
+                <figure class="travel-item">
+                  <img
+                    class="travel-image"
+                    src="./images/carpathians-1.jpg"
+                    alt="Подорож у Карпати"
+                    width="500"
+                    height="350"
+                    loading="lazy"
+                  />
+                  <figcaption class="travel-caption">
+                    Похід у Карпати
+                  </figcaption>
+                </figure>
+
+                <figure class="travel-item">
+                  <img
+                    class="travel-image"
+                    src="./images/carpathians-2.jpg"
+                    alt="Гірський пейзаж у Карпатах"
+                    width="500"
+                    height="350"
+                    loading="lazy"
+                  />
+                  <figcaption class="travel-caption">
+                    Мої улюблені гори
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section class="section projects">
           <h2 class="projects-title">Мої проєкти</h2>
@@ -384,13 +578,185 @@
           </div>
         </section>
 
-        <section class="section goals"></section>
-        <section class="section facts"></section>
-        <section class="section quotes"></section>
-        <section class="section contacts"></section>
+        <section class="section goals">
+          <div class="my-goals">
+            <h2 class="goals-title">Мої цілі</h2>
+            <p class="goal">Поїхати в італію</p>
+            <hr />
+            <p class="goal">Вивчити англійську</p>
+            <hr />
+            <p class="goal">Влаштуватися на роботу по спеціальності</p>
+            <hr />
+            <p class="goal">Написати круту курсову</p>
+            <hr />
+            <p class="goal">Закінчити курси</p>
+            <hr />
+          </div>
+        </section>
+
+        <section class="section facts">
+          <h2 class="facts-title">Цікаві факти про мене</h2>
+
+          <ul class="facts-list">
+            <li class="facts-item">
+              Люблю подорожувати та відкривати нові місця.
+            </li>
+            <li class="facts-item">Особливо люблю походи в гори.</li>
+            <li class="facts-item">Навчаюся створювати сучасні вебсайти.</li>
+            <li class="facts-item">
+              Люблю читати фентезі та романтичні книги.
+            </li>
+            <li class="facts-item">У вільний час люблю готувати.</li>
+            <li class="facts-item">
+              Мені подобається вивчати нові технології.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section quotes">
+          <h2 class="quotes-title">Улюблені цитати</h2>
+
+          <div class="quotes-list">
+            <blockquote class="quotes-item">
+              <p class="quotes-text">
+                «Єдиний спосіб робити велику роботу — любити те, що ти робиш».
+              </p>
+              <cite class="quotes-author">Стів Джобс</cite>
+            </blockquote>
+
+            <blockquote class="quotes-item">
+              <p class="quotes-text">
+                «Успіх — це сума маленьких зусиль, повторюваних день у день».
+              </p>
+              <cite class="quotes-author">Роберт Кольєр</cite>
+            </blockquote>
+
+            <blockquote class="quotes-item">
+              <p class="quotes-text">
+                «Майбутнє залежить від того, що ти робиш сьогодні».
+              </p>
+              <cite class="quotes-author">Махатма Ганді</cite>
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="section contacts">
+          <h2 class="contacts-title">Контакти / зворотний зв’язок</h2>
+
+          <form class="contacts-form">
+            <div class="contacts-field">
+              <label class="contacts-label" for="name">Ім’я</label>
+              <input
+                class="contacts-input"
+                type="text"
+                id="name"
+                name="name"
+                minlength="2"
+                pattern="[A-Za-zА-Яа-яІіЇїЄє' -]{2,}"
+                required
+              />
+            </div>
+
+            <div class="contacts-field">
+              <label class="contacts-label" for="email">E-mail</label>
+              <input
+                class="contacts-input"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="contacts-field">
+              <label class="contacts-label" for="subject">Тема</label>
+              <select
+                class="contacts-select"
+                id="subject"
+                name="subject"
+                required
+              >
+                <option value="" selected disabled>Оберіть тему</option>
+                <option value="project">Співпраця</option>
+                <option value="question">Запитання</option>
+                <option value="feedback">Відгук</option>
+              </select>
+            </div>
+
+            <div class="contacts-field">
+              <label class="contacts-label" for="message">Повідомлення</label>
+              <textarea
+                class="contacts-textarea"
+                id="message"
+                name="message"
+                minlength="10"
+                required
+              ></textarea>
+            </div>
+
+            <div class="contacts-checkbox">
+              <input
+                class="contacts-checkbox-input"
+                type="checkbox"
+                id="agreement"
+                name="agreement"
+                required
+              />
+
+              <label class="contacts-checkbox-label" for="agreement">
+                Я погоджуюся на обробку персональних даних
+              </label>
+            </div>
+
+            <button class="contacts-button" type="submit">Надіслати</button>
+          </form>
+        </section>
       </main>
 
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer-content">
+          <p class="footer-text">Зв'яжіться зі мною</p>
+
+          <address class="footer-address">
+            <ul class="footer-socials">
+              <li class="footer-socials-item">
+                <a
+                  class="footer-socials-link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                </a>
+              </li>
+
+              <li class="footer-socials-item">
+                <a
+                  class="footer-socials-link"
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                </a>
+              </li>
+
+              <li class="footer-socials-item">
+                <a
+                  class="footer-socials-link"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                </a>
+              </li>
+            </ul>
+          </address>
+
+          <p class="footer-copyright">&copy; 2026 Моє портфоліо</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
