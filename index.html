@@ -2,89 +2,162 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Портфоліо Софії</title>
+
+    <meta
+      name="description"
+      content="Персональне портфоліо Софії: освіта, навички, хобі, проєкти, подорожі та контакти."
+    />
+
+    <link rel="icon" href="./images/favicon.ico" />
+
+    <meta property="og:title" content="Портфоліо Софії" />
+    <meta
+      property="og:description"
+      content="Персональне портфоліо Софії: освіта, навички, хобі та проєкти."
+    />
+    <meta property="og:image" content="./images/preview.jpg" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
-    <div class="conteiner">
-      <header class="header">
-        <nav class="header-nav">
+    <div class="container">
+      <header class="header" id="top">
+        <input
+          type="checkbox"
+          id="burger-toggle"
+          class="burger-toggle"
+          hidden
+        />
+
+        <label
+          for="burger-toggle"
+          class="burger-label"
+          aria-label="Відкрити або закрити меню"
+        >
+          ☰
+        </label>
+
+        <nav class="header-nav" aria-label="Головна навігація">
           <ul class="header-list">
             <li class="header-item">
               <a class="header-link" href="#education">Освіта</a>
             </li>
 
             <li class="header-item">
-              <a class="header-link" href="#skils">Навички</a>
+              <a class="header-link" href="#skills">Навички</a>
             </li>
 
             <li class="header-item">
               <a class="header-link" href="#travel">Подорожі</a>
-            </li>
-
-            <li class="header-item">
-              <a class="header-link" href="#contacts">Соціальні мережі</a>
             </li>
           </ul>
         </nav>
       </header>
 
       <main>
-        <section class="section about">
-          <h1 class="about-title">Моє портфоліо</h1>
-          <img class="about-image" src="" alt="Моє фото" />
-          <p class="about-text"></p>
+        <section class="section about" id="about">
+          <div class="about-container">
+            <h1 class="about-title">Моє портфоліо</h1>
 
-          <ul class="about-contacts">
-            <li class="about-contact-item">
-              <a class="about-contact-link" href="tel:+380683113933">
-                +380683113933
-              </a>
-            </li>
-            <li class="about-contact-item">
-              <a
-                class="about-contact-link"
-                href="mailto:leontievasophia@gmail.com"
-              >
-                leontievasophia@gmail.com
-              </a>
-            </li>
-          </ul>
-        </section>
+            <picture class="about-picture">
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/about-desktop.jpg"
+              />
 
-        <section class="section school" id="education">
-          <h2 class="school-title">Освіта: школа</h2>
-          <div class="school-info">
-            <h3 class="school-name">Назва школи</h3>
-            <p class="school-years">Роки навчання: 2013–2024</p>
-            <p class="school-city">Місто: Львів</p>
-            <p class="school-text">
-              Саме у школі я отримала базові знання та визначилася з напрямком
-              подальшого навчання.
+              <img
+                class="about-image"
+                src="./images/about-mobile.jpg"
+                alt="Фото Софії"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+            </picture>
+
+            <p class="about-text">
+              Привіт! Я Софія, студентка третього курсу спеціальності «Прикладна
+              математика». Цікавлюся програмуванням, веброзробкою та люблю
+              вивчати нові технології.
             </p>
+
+            <aside class="about-info">
+              <p class="about-info-text">Студентка 3 курсу</p>
+              <p class="about-info-text">Спеціальність: Прикладна математика</p>
+            </aside>
+
+            <ul class="about-contacts">
+              <li class="about-contact-item">
+                <a class="about-contact-link" href="tel:+380683113933">
+                  +380683113933
+                </a>
+              </li>
+
+              <li class="about-contact-item">
+                <a
+                  class="about-contact-link"
+                  href="mailto:leontievasophia@gmail.com"
+                >
+                  leontievasophia@gmail.com
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
 
-        <section class="section university">
-          <h2 class="university-title">Освіта: університет</h2>
-          <div class="university-info">
-            <h3 class="university-name">
-              Львівський національний університет імені Івана Франка
-            </h3>
-            <p class="university-specialty">
-              Спеціальність: Прикладна математика
-            </p>
-            <p class="university-course">Курс: 3</p>
-            <div class="university-subjects">
-              <h3 class="university-subjects-title">Улюблені дисципліни:</h3>
-              <ul class="university-subjects-list">
-                <li class="university-subjects-item">Веб-програмування</li>
-                <li class="university-subjects-item">Програмування</li>
-                <li class="university-subjects-item">Бази даних</li>
-              </ul>
+        <div class="education-row">
+          <section class="section school" id="education">
+            <h2 class="school-title">Освіта: школа</h2>
+
+            <div class="school-info">
+              <h3 class="school-name">Назва школи</h3>
+
+              <p class="school-years">
+                Роки навчання:
+                <time datetime="2013">2013</time>–<time datetime="2024"
+                  >2024</time
+                >
+              </p>
+
+              <p class="school-city">Місто: Львів</p>
+
+              <p class="school-text">
+                Саме у школі я отримала базові знання та визначилася з напрямком
+                подальшого навчання.
+              </p>
             </div>
-          </div>
-        </section>
+          </section>
+
+          <section class="section university">
+            <h2 class="university-title">Освіта: університет</h2>
+
+            <div class="university-info">
+              <h3 class="university-name">
+                Львівський національний університет імені Івана Франка
+              </h3>
+
+              <p class="university-specialty">
+                Спеціальність: Прикладна математика
+              </p>
+
+              <p class="university-course">Курс: 3</p>
+
+              <div class="university-subjects">
+                <h3 class="university-subjects-title">Улюблені дисципліни:</h3>
+
+                <ul class="university-subjects-list">
+                  <li class="university-subjects-item">Веб-програмування</li>
+                  <li class="university-subjects-item">Програмування</li>
+                  <li class="university-subjects-item">Бази даних</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
 
         <section class="section subjects">
           <h2 class="subjects-title">Улюблені навчальні предмети</h2>
@@ -175,45 +248,67 @@
         </section>
 
         <section class="section hobbies">
-          <h2 class="hobbies-title">Мої хобі</h2>
+          <details class="hobbies-details" open>
+            <summary class="hobbies-summary">
+              <h2 class="hobbies-title">Мої хобі</h2>
+            </summary>
 
-          <div class="hobbies-list">
-            <img
-              class="hobbies-image"
-              src="./images/hobby-1.jpg"
-              alt="Моє хобі"
-            />
+            <div class="hobbies-list">
+              <img
+                class="hobbies-image"
+                src="./images/hobi1.jpg"
+                alt="Моє хобі 1"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
 
-            <img
-              class="hobbies-image"
-              src="./images/hobby-2.jpg"
-              alt="Моє хобі"
-            />
+              <img
+                class="hobbies-image"
+                src="./images/hobi2.jpg"
+                alt="Моє хобі 2"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
 
-            <img
-              class="hobbies-image"
-              src="./images/hobby-3.jpg"
-              alt="Моє хобі"
-            />
+              <img
+                class="hobbies-image"
+                src="./images/hobi4.jpg"
+                alt="Моє хобі 3"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
 
-            <img
-              class="hobbies-image"
-              src="./images/hobby-4.jpg"
-              alt="Моє хобі"
-            />
+              <img
+                class="hobbies-image"
+                src="./images/hobi3.jpg"
+                alt="Моє хобі 4"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
 
-            <img
-              class="hobbies-image"
-              src="./images/hobby-5.jpg"
-              alt="Моє хобі"
-            />
+              <img
+                class="hobbies-image"
+                src="./images/hobi5.jpg"
+                alt="Моє хобі 5"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
 
-            <img
-              class="hobbies-image"
-              src="./images/hobby-6.jpg"
-              alt="Моє хобі"
-            />
-          </div>
+              <img
+                class="hobbies-image"
+                src="./images/hobi6.jpg"
+                alt="Моє хобі 6"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+            </div>
+          </details>
         </section>
 
         <section class="section books">
@@ -332,7 +427,7 @@
               <img
                 class="music-image"
                 src="./images/artist-1.jpg"
-                alt="Обкладинка альбому виконавця"
+                alt="Обкладинка альбому The Weeknd"
                 width="300"
                 height="300"
                 loading="lazy"
@@ -344,7 +439,7 @@
               <img
                 class="music-image"
                 src="./images/artist-2.jpg"
-                alt="Обкладинка альбому виконавця"
+                alt="Обкладинка альбому Lana Del Rey"
                 width="300"
                 height="300"
                 loading="lazy"
@@ -356,7 +451,7 @@
               <img
                 class="music-image"
                 src="./images/artist-3.jpg"
-                alt="Обкладинка альбому виконавця"
+                alt="Обкладинка альбому Billie Eilish"
                 width="300"
                 height="300"
                 loading="lazy"
@@ -462,6 +557,7 @@
 
         <section class="section sport">
           <h2 class="sport-title">Спорт та активності</h2>
+
           <div class="sport-content">
             <img
               class="sport-image"
@@ -581,14 +677,19 @@
         <section class="section goals">
           <div class="my-goals">
             <h2 class="goals-title">Мої цілі</h2>
-            <p class="goal">Поїхати в італію</p>
+
+            <p class="goal">Поїхати в Італію</p>
             <hr />
+
             <p class="goal">Вивчити англійську</p>
             <hr />
-            <p class="goal">Влаштуватися на роботу по спеціальності</p>
+
+            <p class="goal">Влаштуватися на роботу за спеціальністю</p>
             <hr />
+
             <p class="goal">Написати круту курсову</p>
             <hr />
+
             <p class="goal">Закінчити курси</p>
             <hr />
           </div>
@@ -641,11 +742,11 @@
         </section>
 
         <section class="section contacts">
-          <h2 class="contacts-title">Контакти / зворотний зв’язок</h2>
+          <h2 class="contacts-title">Контакти / зворотний зв'язок</h2>
 
           <form class="contacts-form">
             <div class="contacts-field">
-              <label class="contacts-label" for="name">Ім’я</label>
+              <label class="contacts-label" for="name">Ім'я</label>
               <input
                 class="contacts-input"
                 type="text"
@@ -727,6 +828,7 @@
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                 >
+                  <!-- SVG Instagram -->
                 </a>
               </li>
 
@@ -738,6 +840,7 @@
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                 >
+                  <!-- SVG GitHub -->
                 </a>
               </li>
 
@@ -749,10 +852,13 @@
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
                 >
+                  <!-- SVG LinkedIn -->
                 </a>
               </li>
             </ul>
           </address>
+
+          <a class="footer-top-link" href="#top">Нагору ↑</a>
 
           <p class="footer-copyright">&copy; 2026 Моє портфоліо</p>
         </div>

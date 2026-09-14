@@ -1,0 +1,1817 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --color-dark: #2f4860;
+  --color-light-blue: #dceeff;
+  --color-blue: #7da7d9;
+  --color-yellow: #fff7cc;
+  --color-white: #ffffff;
+
+  --shadow: 0 0.5rem 1.5rem rgba(47, 72, 96, 0.15);
+
+  --transition: 250ms ease;
+}
+
+/* =========================
+   BASE
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+}
+
+/* =========================
+   HEADER
+========================= */
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  background-color: var(--color-white);
+
+  border-bottom: 0.0625rem solid var(--color-light-blue);
+}
+
+/* =========================
+   BURGER
+   MOBILE
+========================= */
+
+.burger-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  margin-left: auto;
+  margin-right: 1rem;
+
+  font-size: 1.5rem;
+
+  color: var(--color-dark);
+
+  cursor: pointer;
+}
+
+.header-nav {
+  display: none;
+}
+
+.burger-toggle:checked + .burger-label + .header-nav {
+  display: block;
+}
+
+/* =========================
+   HEADER LIST
+========================= */
+
+.header-list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: var(--color-white);
+}
+
+.header-item {
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+}
+
+/* =========================
+   HEADER LINKS
+========================= */
+
+.header-link {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 0.6rem 0.9rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--color-dark);
+
+  border-radius: 0.6rem;
+
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+/* ЛІНІЯ ПІД ПОСИЛАННЯМ */
+
+.header-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0.15rem;
+
+  width: 0;
+  height: 0.12rem;
+
+  background-color: var(--color-blue);
+
+  border-radius: 1rem;
+
+  transform: translateX(-50%);
+
+  transition: width 250ms ease;
+}
+
+/* HOVER */
+
+.header-link:hover {
+  color: var(--color-blue);
+
+  background-color: var(--color-light-blue);
+
+  transform: translateY(-0.1rem);
+}
+
+.header-link:hover::after {
+  width: 65%;
+}
+
+/* FOCUS */
+
+.header-link:focus-visible {
+  outline: 0.15rem solid var(--color-blue);
+  outline-offset: 0.2rem;
+
+  background-color: var(--color-light-blue);
+}
+
+/* ACTIVE */
+
+.header-link:active {
+  color: var(--color-dark);
+
+  background-color: var(--color-yellow);
+
+  transform: scale(0.96);
+}
+
+/* =========================
+   TABLET HEADER
+   768px+
+========================= */
+
+@media (min-width: 768px) {
+  .burger-label {
+    display: none;
+  }
+
+  .header-nav {
+    display: block;
+  }
+
+  .header-list {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    padding: 0.8rem 2rem;
+  }
+
+  .header-item {
+    text-align: left;
+  }
+
+  .header-link {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+/* =========================
+   DESKTOP HEADER
+   1200px+
+========================= */
+
+@media (min-width: 1200px) {
+  .header-list {
+    max-width: 75rem;
+
+    margin: 0 auto;
+
+    padding: 0.9rem 0;
+
+    gap: 2.5rem;
+  }
+
+  .header-link {
+    font-size: 1rem;
+  }
+}
+/* =========================
+   ABOUT
+   MOBILE
+========================= */
+
+.about {
+  position: relative;
+  overflow: hidden;
+
+  padding: 3rem 1rem;
+
+  min-height: 40rem;
+}
+
+/* ФОНОВЕ ФОТО */
+
+.about::before {
+  content: "";
+
+  position: absolute;
+  inset: -0.5rem;
+
+  z-index: -2;
+
+  background-image: url("../images/fon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: blur(0.15rem);
+
+  transform: scale(1.02);
+}
+
+/* ЛЕГКИЙ СВІТЛИЙ ШАР ПОВЕРХ ФОНУ */
+
+.about::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background-color: rgba(220, 238, 255, 0.48);
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.about-title {
+  margin: 0;
+
+  font-size: clamp(2.6rem, 10vw, 4rem);
+  line-height: 1;
+  text-align: center;
+
+  color: var(--color-dark);
+}
+
+/* =========================
+   MAIN PHOTO
+========================= */
+
+.about-picture {
+  display: block;
+}
+
+.about-image {
+  width: 18rem;
+  height: 24rem;
+
+  object-fit: cover;
+  object-position: center;
+
+  /* КРУГЛІ КРАЇ */
+
+  border-radius: 45% 45% 45% 45% / 35% 35% 35% 35%;
+
+  /* ФОТО НЕ БЛЮРИТЬСЯ */
+
+  filter: none;
+
+  box-shadow: var(--shadow);
+
+  border: 0.3rem solid rgba(255, 255, 255, 0.8);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.about-text {
+  max-width: 32rem;
+
+  margin: 0;
+
+  font-size: clamp(1rem, 3vw, 1.15rem);
+  line-height: 1.6;
+
+  text-align: center;
+
+  color: var(--color-dark);
+}
+
+.about-info {
+  width: 100%;
+  max-width: 28rem;
+
+  padding: 1rem 1.2rem;
+
+  background-color: rgba(255, 247, 204, 0.9);
+
+  border-radius: 1rem;
+
+  box-shadow: var(--shadow);
+
+  text-align: center;
+}
+
+.about-info-text {
+  margin: 0.3rem 0;
+}
+
+.about-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.6rem;
+}
+
+.about-contact-link {
+  font-weight: 600;
+
+  color: var(--color-dark);
+
+  transition: color var(--transition);
+}
+
+.about-contact-link:hover,
+.about-contact-link:focus-visible {
+  color: var(--color-blue);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) {
+  .burger-label {
+    display: none;
+  }
+
+  .header-nav {
+    display: block;
+  }
+
+  .header-list {
+    flex-direction: row;
+    justify-content: flex-end;
+
+    gap: 2rem;
+
+    padding: 1rem 2rem;
+  }
+
+  .header-link {
+    padding: 0.4rem 0;
+  }
+
+  .about {
+    padding: 4rem 2rem;
+  }
+
+  .about-container {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    grid-template-areas:
+      "image title"
+      "image text"
+      "image info"
+      "image contacts";
+
+    align-items: center;
+
+    column-gap: 3rem;
+    row-gap: 1.2rem;
+  }
+
+  .about-picture {
+    grid-area: image;
+  }
+
+  .about-image {
+    width: 21rem;
+    height: 28rem;
+  }
+
+  .about-title {
+    grid-area: title;
+
+    text-align: left;
+
+    font-size: clamp(3.5rem, 6vw, 4.8rem);
+  }
+
+  .about-text {
+    grid-area: text;
+
+    text-align: left;
+  }
+
+  .about-info {
+    grid-area: info;
+
+    text-align: left;
+  }
+
+  .about-contacts {
+    grid-area: contacts;
+
+    flex-direction: row;
+    justify-content: flex-start;
+
+    gap: 1.5rem;
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1200px) {
+  .header-list {
+    max-width: 75rem;
+
+    margin: 0 auto;
+
+    padding: 1rem 0;
+  }
+
+  .about {
+    min-height: 42rem;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5rem 4rem;
+  }
+
+  .about-container {
+    width: 100%;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    column-gap: 5rem;
+  }
+
+  .about-image {
+    width: 25rem;
+    height: 32rem;
+  }
+
+  .about-title {
+    font-size: clamp(4.5rem, 5vw, 5.8rem);
+  }
+
+  .about-text {
+    max-width: 35rem;
+
+    font-size: 1.1rem;
+  }
+}
+.about {
+  position: relative;
+}
+
+.about {
+  border-radius: 0 0 50% 50% / 0 0 3rem 3rem;
+}
+/* =========================
+   EDUCATION
+========================= */
+
+.education-row {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 2rem;
+
+  width: 100%;
+
+  padding: 3rem 1rem;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(255, 247, 204, 0.85) 0%,
+      rgba(255, 247, 204, 0) 25%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(220, 238, 255, 0.8) 0%,
+      rgba(255, 255, 255, 1) 8rem
+    );
+  margin-top: -0.1rem;
+}
+
+/* ВЕЛИКІ КОЛЬОРОВІ ПЛЯМИ НА ФОНІ */
+
+.education-row::before {
+  content: "";
+
+  position: absolute;
+
+  width: 28rem;
+  height: 28rem;
+
+  top: -8rem;
+  left: -10rem;
+
+  z-index: -1;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 247, 204, 0.95) 0%,
+    rgba(255, 247, 204, 0.65) 25%,
+    rgba(125, 167, 217, 0.25) 52%,
+    rgba(220, 238, 255, 0) 75%
+  );
+
+  filter: blur(1rem);
+}
+
+.education-row::after {
+  content: "";
+
+  position: absolute;
+
+  width: 30rem;
+  height: 30rem;
+
+  right: -11rem;
+  bottom: -10rem;
+
+  z-index: -1;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(125, 167, 217, 0.42) 0%,
+    rgba(220, 238, 255, 0.45) 38%,
+    rgba(255, 247, 204, 0.25) 58%,
+    rgba(255, 255, 255, 0) 78%
+  );
+
+  filter: blur(1.2rem);
+}
+
+/* =========================
+   SCHOOL + UNIVERSITY
+========================= */
+
+.school,
+.university {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: visible;
+}
+
+/* Прибираємо старі градієнти окремих section */
+
+.school::before,
+.university::before {
+  display: none;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.school-title,
+.university-title {
+  position: relative;
+
+  margin: 0 0 1.5rem;
+
+  font-size: clamp(2rem, 8vw, 2.7rem);
+  line-height: 1.1;
+  font-weight: 700;
+
+  text-align: center;
+
+  color: var(--color-dark);
+}
+
+/* маленький декоративний елемент */
+
+.school-title::after,
+.university-title::after {
+  content: "";
+
+  display: block;
+
+  width: 3.5rem;
+  height: 0.2rem;
+
+  margin: 0.8rem auto 0;
+
+  border-radius: 1rem;
+
+  background-color: var(--color-blue);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.school-info,
+.university-info {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  padding: 1.7rem;
+
+  overflow: hidden;
+
+  background-color: rgba(255, 255, 255, 0.82);
+
+  border: 0.1rem solid rgba(125, 167, 217, 0.4);
+
+  border-radius: 1.7rem;
+
+  box-shadow:
+    0 0.8rem 2rem rgba(47, 72, 96, 0.12),
+    inset 0 0 0 0.05rem rgba(255, 255, 255, 0.8);
+
+  backdrop-filter: blur(0.5rem);
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+
+/* ЖОВТА КРУГЛА ПЛЯМА ВСЕРЕДИНІ КАРТКИ */
+
+.school-info::before,
+.university-info::before {
+  content: "";
+
+  position: absolute;
+
+  width: 12rem;
+  height: 12rem;
+
+  z-index: 0;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 247, 204, 0.9) 0%,
+    rgba(255, 247, 204, 0.45) 40%,
+    rgba(255, 247, 204, 0) 72%
+  );
+
+  filter: blur(0.4rem);
+
+  pointer-events: none;
+}
+
+.school-info::before {
+  top: -3rem;
+  right: -3rem;
+}
+
+.university-info::before {
+  bottom: -3rem;
+  left: -3rem;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.school-name,
+.university-name,
+.university-subjects-title,
+.school-years,
+.school-city,
+.school-text,
+.university-specialty,
+.university-course,
+.university-subjects {
+  position: relative;
+  z-index: 1;
+}
+
+.school-name,
+.university-name {
+  margin: 0 0 1rem;
+
+  font-size: clamp(1.25rem, 5vw, 1.55rem);
+  line-height: 1.25;
+
+  color: var(--color-dark);
+}
+
+.school-years,
+.school-city,
+.school-text,
+.university-specialty,
+.university-course {
+  margin: 0.7rem 0;
+
+  line-height: 1.6;
+
+  color: var(--color-dark);
+}
+
+.school-text {
+  margin-top: 1.2rem;
+}
+
+.university-subjects-title {
+  margin: 1.4rem 0 0.8rem;
+
+  font-size: 1.05rem;
+
+  color: var(--color-dark);
+}
+
+/* =========================
+   SUBJECT PILLS
+========================= */
+
+.university-subjects-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.6rem;
+}
+
+.university-subjects-item {
+  padding: 0.45rem 0.8rem;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color: var(--color-dark);
+
+  background-color: var(--color-light-blue);
+
+  border-radius: 2rem;
+
+  transition:
+    transform 250ms ease,
+    background-color 250ms ease;
+}
+
+.university-subjects-item:hover {
+  background-color: var(--color-yellow);
+
+  transform: translateY(-0.15rem);
+}
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.school-info:hover,
+.university-info:hover {
+  transform: translateY(-0.4rem);
+
+  border-color: var(--color-blue);
+
+  box-shadow:
+    0 1.2rem 2.5rem rgba(47, 72, 96, 0.18),
+    inset 0 0 0 0.05rem rgba(255, 255, 255, 0.8);
+}
+
+/* =========================
+   TABLET
+   768px+
+========================= */
+
+@media (min-width: 768px) {
+  .education-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    gap: 1.5rem;
+
+    padding: 4rem 2rem;
+  }
+
+  .school,
+  .university {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .school-title,
+  .university-title {
+    min-height: 5.5rem;
+
+    font-size: clamp(2rem, 4vw, 2.6rem);
+  }
+
+  .school-info,
+  .university-info {
+    flex-grow: 1;
+
+    min-height: 25rem;
+
+    padding: 2rem;
+  }
+
+  /* більші фонові градієнти */
+
+  .education-row::before {
+    width: 38rem;
+    height: 38rem;
+
+    top: -14rem;
+    left: -13rem;
+  }
+
+  .education-row::after {
+    width: 40rem;
+    height: 40rem;
+
+    right: -14rem;
+    bottom: -15rem;
+  }
+
+  .school-info::before,
+  .university-info::before {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+/* =========================
+   DESKTOP
+   1200px+
+========================= */
+
+@media (min-width: 1200px) {
+  .education-row {
+    grid-template-columns:
+      minmax(0, 36rem)
+      minmax(0, 36rem);
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 3rem;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    padding: 5rem 4rem;
+  }
+
+  .school-title,
+  .university-title {
+    min-height: auto;
+
+    margin-bottom: 2rem;
+
+    font-size: clamp(2.4rem, 3vw, 3.2rem);
+  }
+
+  .school-info,
+  .university-info {
+    min-height: 27rem;
+
+    padding: 2.5rem;
+  }
+
+  .education-row::before {
+    width: 58rem;
+    height: 58rem;
+
+    top: -24rem;
+    left: -16rem;
+
+    filter: blur(2rem);
+  }
+
+  .education-row::after {
+    width: 60rem;
+    height: 60rem;
+
+    right: -18rem;
+    bottom: -24rem;
+
+    filter: blur(2rem);
+  }
+}
+
+/* =========================
+   SUBJECTS
+   MOBILE FIRST
+========================= */
+
+.subjects {
+  width: 100%;
+  margin: 0;
+  padding: 3.5rem 1rem 4.5rem;
+
+  color: var(--color-white);
+
+  /*
+    Темно-синій основний фон +
+    невеликий м'який блакитний акцент ТІЛЬКИ справа зверху.
+    Ніякого кола зліва внизу.
+  */
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(125, 167, 217, 0.42) 0%,
+      rgba(125, 167, 217, 0.22) 18%,
+      rgba(125, 167, 217, 0) 42%
+    ),
+    var(--color-dark);
+}
+
+/* =========================
+   SUBJECTS TITLE
+========================= */
+
+.subjects-title {
+  margin: 0 auto 2.5rem;
+
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  line-height: 1.1;
+  font-weight: 700;
+
+  text-align: center;
+
+  color: var(--color-white);
+}
+
+.subjects-title::after {
+  content: "";
+
+  display: block;
+
+  width: 4rem;
+  height: 0.2rem;
+
+  margin: 0.9rem auto 0;
+
+  border-radius: 2rem;
+
+  background-color: var(--color-yellow);
+}
+
+/* =========================
+   SUBJECTS LIST
+========================= */
+
+.subjects-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 1rem;
+
+  width: 100%;
+  max-width: 75rem;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   SUBJECT CARD
+========================= */
+
+.subjects-item {
+  position: relative;
+
+  min-height: 11rem;
+
+  padding: 1.5rem;
+
+  overflow: hidden;
+
+  background-color: rgba(220, 238, 255, 0.11);
+
+  border: 0.08rem solid rgba(220, 238, 255, 0.24);
+
+  border-radius: 1.3rem;
+
+  box-shadow: 0 0.5rem 1.3rem rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+/* невеликий декоративний акцент у картці */
+
+.subjects-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: -3.5rem;
+  right: -3.5rem;
+
+  width: 8rem;
+  height: 8rem;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 247, 204, 0.16) 0%,
+    rgba(255, 247, 204, 0) 72%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   SUBJECT TEXT
+========================= */
+
+.subjects-name {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 0.8rem;
+
+  font-size: clamp(1.2rem, 5vw, 1.45rem);
+  line-height: 1.2;
+
+  color: var(--color-yellow);
+}
+
+.subjects-text {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  line-height: 1.6;
+
+  color: var(--color-light-blue);
+}
+
+/* =========================
+   SUBJECT EFFECTS
+========================= */
+
+.subjects-item:hover {
+  transform: translateY(-0.3rem);
+
+  background-color: rgba(220, 238, 255, 0.16);
+
+  border-color: rgba(125, 167, 217, 0.8);
+
+  box-shadow: 0 0.9rem 1.8rem rgba(0, 0, 0, 0.13);
+}
+
+.subjects-item:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   SUBJECTS TABLET
+   768px+
+========================= */
+
+@media (min-width: 768px) {
+  .subjects {
+    padding: 4.5rem 2rem 5rem;
+
+    background:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(125, 167, 217, 0.38) 0%,
+        rgba(125, 167, 217, 0.18) 16%,
+        rgba(125, 167, 217, 0) 36%
+      ),
+      var(--color-dark);
+  }
+
+  .subjects-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.3rem;
+  }
+
+  .subjects-item:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================
+   SUBJECTS DESKTOP
+   1200px+
+========================= */
+
+@media (min-width: 1200px) {
+  .subjects {
+    padding: 5.5rem 4rem 6rem;
+
+    background:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(125, 167, 217, 0.34) 0%,
+        rgba(125, 167, 217, 0.15) 15%,
+        rgba(125, 167, 217, 0) 32%
+      ),
+      var(--color-dark);
+  }
+
+  .subjects-title {
+    margin-bottom: 3rem;
+
+    font-size: clamp(2.8rem, 3vw, 3.5rem);
+  }
+
+  .subjects-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.5rem;
+  }
+
+  .subjects-item:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .subjects-item {
+    min-height: 13rem;
+
+    padding: 1.8rem;
+  }
+}
+
+/* =========================
+   SKILLS
+   MOBILE FIRST
+========================= */
+
+.skills {
+  width: 100%;
+  margin: 0;
+  padding: 4.5rem 1rem 5rem;
+
+  /*
+    Верх починається ТОЧНО тим самим темно-синім,
+    яким закінчується SUBJECTS.
+    Тому між секціями немає різкого стику.
+
+    Далі плавний перехід у світло-блакитний.
+  */
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(125, 167, 217, 0.22) 0%,
+      rgba(125, 167, 217, 0.1) 18%,
+      rgba(125, 167, 217, 0) 34%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-dark) 0%,
+      #405c77 24%,
+      #6f8fb3 48%,
+      #acc8e7 74%,
+      var(--color-light-blue) 100%
+    );
+}
+
+/* =========================
+   SKILLS TITLE
+========================= */
+
+.skills-title {
+  margin: 0 0 2.5rem;
+
+  font-size: clamp(2.2rem, 8vw, 3.2rem);
+  line-height: 1.1;
+  font-weight: 700;
+
+  text-align: center;
+
+  color: var(--color-white);
+}
+
+.skills-title::after {
+  content: "";
+
+  display: block;
+
+  width: 4rem;
+  height: 0.2rem;
+
+  margin: 0.9rem auto 0;
+
+  border-radius: 2rem;
+
+  background-color: var(--color-yellow);
+}
+
+/* =========================
+   SKILLS CONTENT
+========================= */
+
+.skills-content {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 1.5rem;
+
+  width: 100%;
+  max-width: 75rem;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   SKILLS CARD
+========================= */
+
+.skills-group {
+  width: 100%;
+
+  padding: 1.7rem;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  border: 0.1rem solid rgba(220, 238, 255, 0.9);
+
+  border-radius: 1.6rem;
+
+  box-shadow:
+    0 0.8rem 2rem rgba(47, 72, 96, 0.16),
+    inset 0 0 0 0.05rem rgba(255, 255, 255, 0.7);
+
+  backdrop-filter: blur(0.5rem);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+/* ніяких круглих плям у картках */
+
+.skills-group::before,
+.skills-group::after {
+  display: none;
+}
+
+/* =========================
+   SKILLS CARD EFFECT
+========================= */
+
+.skills-group:hover {
+  transform: translateY(-0.35rem);
+
+  border-color: var(--color-yellow);
+
+  box-shadow:
+    0 1.1rem 2.4rem rgba(47, 72, 96, 0.22),
+    inset 0 0 0 0.05rem rgba(255, 255, 255, 0.8);
+}
+
+/* =========================
+   SKILLS SUBTITLE
+========================= */
+
+.skills-subtitle {
+  margin: 0 0 1.8rem;
+
+  font-size: clamp(1.4rem, 5vw, 1.7rem);
+  line-height: 1.2;
+
+  color: var(--color-dark);
+}
+
+/* =========================
+   SKILLS LIST
+========================= */
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.4rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* =========================
+   SKILL ITEM
+========================= */
+
+.skills-item {
+  display: grid;
+
+  gap: 0.55rem;
+}
+
+.skills-name {
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: var(--color-dark);
+}
+
+/* =========================
+   SKILL BAR
+========================= */
+
+.skills-level {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 0.75rem;
+
+  overflow: hidden;
+
+  background-color: var(--color-light-blue);
+
+  border: 0.06rem solid rgba(47, 72, 96, 0.1);
+
+  border-radius: 5rem;
+
+  box-shadow: inset 0 0.1rem 0.25rem rgba(47, 72, 96, 0.08);
+}
+
+/* лимонне заповнення */
+
+.skills-level::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(90deg, var(--color-yellow), #fff0a6);
+
+  transition:
+    width 600ms ease,
+    filter var(--transition);
+}
+
+/* =========================
+   TECHNICAL LEVELS
+========================= */
+
+.skills-level-html::before {
+  width: 90%;
+}
+
+.skills-level-css::before {
+  width: 85%;
+}
+
+.skills-level-js::before {
+  width: 70%;
+}
+
+.skills-level-csharp::before {
+  width: 65%;
+}
+
+/* =========================
+   SOFT SKILLS LEVELS
+========================= */
+
+.skills-level-communication::before {
+  width: 95%;
+}
+
+.skills-level-teamwork::before {
+  width: 90%;
+}
+
+.skills-level-responsibility::before {
+  width: 95%;
+}
+
+.skills-level-organization::before {
+  width: 88%;
+}
+
+/* =========================
+   SKILL EFFECT
+========================= */
+
+.skills-item:hover .skills-level::before {
+  filter: brightness(1.04);
+}
+
+/* =========================
+   SKILLS TABLET
+   768px+
+========================= */
+
+@media (min-width: 768px) {
+  .skills {
+    padding: 5rem 2rem 6rem;
+
+    background:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(125, 167, 217, 0.2) 0%,
+        rgba(125, 167, 217, 0.08) 15%,
+        rgba(125, 167, 217, 0) 30%
+      ),
+      linear-gradient(
+        to bottom,
+        var(--color-dark) 0%,
+        #405c77 23%,
+        #6f8fb3 47%,
+        #acc8e7 73%,
+        var(--color-light-blue) 100%
+      );
+  }
+
+  .skills-title {
+    margin-bottom: 3rem;
+  }
+
+  .skills-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    gap: 1.5rem;
+  }
+
+  .skills-group {
+    padding: 2rem;
+  }
+}
+
+/* =========================
+   SKILLS DESKTOP
+   1200px+
+========================= */
+
+@media (min-width: 1200px) {
+  .skills {
+    padding: 6rem 4rem 7rem;
+
+    background:
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(125, 167, 217, 0.18) 0%,
+        rgba(125, 167, 217, 0.07) 13%,
+        rgba(125, 167, 217, 0) 27%
+      ),
+      linear-gradient(
+        to bottom,
+        var(--color-dark) 0%,
+        #405c77 22%,
+        #6f8fb3 46%,
+        #acc8e7 72%,
+        var(--color-light-blue) 100%
+      );
+  }
+
+  .skills-title {
+    margin-bottom: 3rem;
+
+    font-size: clamp(2.8rem, 3vw, 3.6rem);
+  }
+
+  .skills-content {
+    gap: 2.5rem;
+  }
+
+  .skills-group {
+    min-height: 25rem;
+
+    padding: 2.5rem;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .subjects-item,
+  .skills-group,
+  .skills-level::before {
+    transition: none;
+  }
+}
+
+/* =========================
+   HOBBIES
+   MOBILE FIRST
+========================= */
+
+.hobbies {
+  width: 100%;
+  margin: 0;
+  padding: 4rem 1rem 5rem;
+
+  background: linear-gradient(
+    to bottom,
+    var(--color-light-blue) 0%,
+    #eef6ff 24%,
+    #f8fbff 55%,
+    var(--color-white) 100%
+  );
+}
+
+/* =========================
+   DETAILS
+========================= */
+
+.hobbies-details {
+  width: 100%;
+  max-width: 75rem;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.hobbies-summary {
+  list-style: none;
+
+  cursor: pointer;
+}
+
+.hobbies-summary::-webkit-details-marker {
+  display: none;
+}
+
+.hobbies-summary::marker {
+  display: none;
+  content: "";
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.hobbies-title {
+  margin: 0 0 2.5rem;
+
+  font-size: clamp(2.2rem, 8vw, 3.2rem);
+  line-height: 1.1;
+  font-weight: 700;
+
+  text-align: center;
+
+  color: var(--color-dark);
+}
+
+.hobbies-title::after {
+  content: "";
+
+  display: block;
+
+  width: 4rem;
+  height: 0.2rem;
+
+  margin: 0.9rem auto 0;
+
+  border-radius: 2rem;
+
+  background-color: var(--color-yellow);
+}
+
+/* =========================
+   HOBBIES GRID
+========================= */
+
+.hobbies-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 1rem;
+}
+
+/* =========================
+   HOBBY IMAGE
+========================= */
+
+.hobbies-image {
+  width: 100%;
+  height: 16rem;
+
+  object-fit: cover;
+
+  border-radius: 1.5rem;
+
+  box-shadow: 0 0.7rem 1.8rem rgba(47, 72, 96, 0.12);
+
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease,
+    filter 300ms ease;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.hobbies-image:hover {
+  transform: scale(1.025);
+
+  box-shadow: 0 1rem 2.3rem rgba(47, 72, 96, 0.18);
+
+  filter: saturate(1.05);
+}
+
+/* =========================
+   TABLET
+   768px+
+========================= */
+
+@media (min-width: 768px) {
+  .hobbies {
+    padding: 5rem 2rem 6rem;
+  }
+
+  .hobbies-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 1.2rem;
+  }
+
+  .hobbies-image {
+    height: 18rem;
+  }
+}
+
+/* =========================
+   DESKTOP
+   1200px+
+========================= */
+
+@media (min-width: 1200px) {
+  .hobbies {
+    padding: 6rem 4rem 7rem;
+  }
+
+  .hobbies-title {
+    margin-bottom: 3rem;
+
+    font-size: clamp(2.8rem, 3vw, 3.5rem);
+  }
+
+  .hobbies-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    grid-auto-rows: 14rem;
+
+    gap: 1.4rem;
+  }
+
+  .hobbies-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* МОЗАЇКА */
+
+  .hobbies-image:nth-child(1) {
+    grid-row: span 2;
+  }
+
+  .hobbies-image:nth-child(4) {
+    grid-row: span 2;
+  }
+
+  .hobbies-image:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+/* =========================
+   FOCUS
+========================= */
+
+.hobbies-summary:focus-visible {
+  outline: 0.15rem solid var(--color-blue);
+  outline-offset: 0.4rem;
+
+  border-radius: 0.6rem;
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hobbies-image {
+    transition: none;
+  }
+}
