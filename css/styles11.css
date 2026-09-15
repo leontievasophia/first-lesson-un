@@ -3,88 +3,113 @@
 ========================= */
 
 :root {
-  /* Основна палітра */
   --color-dark: #2f4860;
   --color-light-blue: #dceeff;
   --color-blue: #7da7d9;
   --color-yellow: #fff7cc;
   --color-white: #ffffff;
 
-  /* Додаткові відтінки */
-  --blue-dark-2: #456783;
-  --blue-mid: #6f8fb3;
-  --blue-soft: #acc8e7;
-  --blue-deep: #24394d;
-  --surface-blue: #f5faff;
-  --yellow-strong: #fff0a6;
-  --green-accent: rgba(82, 145, 111, 0.55);
-
-  /* Прозорі кольори */
-  --overlay-blue-soft: rgba(220, 238, 255, 0.55);
-  --surface-glass: rgba(255, 255, 255, 0.92);
-  --accent-strong: rgba(255, 247, 204, 0.9);
-  --accent-soft: rgba(255, 247, 204, 0.2);
-  --blue-border: rgba(125, 167, 217, 0.28);
-  --blue-glow: rgba(220, 238, 255, 0.2);
-  --dark-shadow-soft: rgba(47, 72, 96, 0.15);
-  --black-shadow: rgba(0, 0, 0, 0.1);
-  --white-soft: rgba(255, 255, 255, 0.7);
-  --white-faint: rgba(255, 255, 255, 0.12);
-  --text-muted: rgba(47, 72, 96, 0.75);
-  --transparent: rgba(255, 255, 255, 0);
-
-  /* Інше */
-  --shadow-color: rgba(47, 72, 96, 0.15);
   --shadow: 0 0.5rem 1.5rem var(--shadow-color);
+
   --transition: 250ms ease;
-}
 
-/* =========================
-   DARK THEME
-   Світлі блоки стають темними,
-   темні — світлими.
-   Змінюються ТІЛЬКИ змінні.
-========================= */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Інверсія основної палітри */
-    --color-dark: #e8f1fa;
-    --color-light-blue: #24394d;
-    --color-blue: #8fb4df;
-    --color-yellow: #e4d076;
-    --color-white: #172635;
-
-    /* Додаткові відтінки */
-    --blue-dark-2: #d6e5f3;
-    --blue-mid: #9dbce0;
-    --blue-soft: #405b73;
-    --blue-deep: #f0f6fb;
-    --surface-blue: #203244;
-    --yellow-strong: #f0dc7e;
-    --green-accent: rgba(178, 179, 157, 0.72);
-
-    /* Прозорі поверхні та контраст */
-    --overlay-blue-soft: rgba(23, 38, 53, 0.82);
-    --surface-glass: rgba(28, 45, 61, 0.94);
-    --accent-strong: rgba(228, 208, 118, 0.92);
-    --accent-soft: rgba(228, 208, 118, 0.16);
-    --blue-border: rgba(143, 180, 223, 0.38);
-    --blue-glow: rgba(143, 180, 223, 0.15);
-    --dark-shadow-soft: rgba(0, 0, 0, 0.28);
-    --black-shadow: rgba(0, 0, 0, 0.28);
-    --white-soft: rgba(232, 241, 250, 0.78);
-    --white-faint: rgba(232, 241, 250, 0.12);
-    --text-muted: rgba(232, 241, 250, 0.74);
-    --transparent: rgba(23, 38, 53, 0);
-
-    --shadow-color: rgba(0, 0, 0, 0.28);
-  }
+  /* Додаткові кольори: значення не змінені */
+  --color-extra-1: rgba(220, 238, 255, 0.48);
+  --color-extra-2: rgba(255, 255, 255, 0.8);
+  --color-extra-3: rgba(255, 247, 204, 0.9);
+  --color-extra-4: rgba(255, 247, 204, 0.85);
+  --color-extra-5: rgba(255, 247, 204, 0);
+  --color-extra-6: rgba(220, 238, 255, 0.8);
+  --color-extra-7: rgba(255, 255, 255, 1);
+  --color-extra-8: rgba(255, 247, 204, 0.95);
+  --color-extra-9: rgba(255, 247, 204, 0.65);
+  --color-extra-10: rgba(125, 167, 217, 0.25);
+  --color-extra-11: rgba(220, 238, 255, 0);
+  --color-extra-12: rgba(125, 167, 217, 0.42);
+  --color-extra-13: rgba(220, 238, 255, 0.45);
+  --color-extra-14: rgba(255, 247, 204, 0.25);
+  --color-extra-15: rgba(255, 255, 255, 0);
+  --color-extra-16: rgba(255, 255, 255, 0.82);
+  --color-extra-17: rgba(125, 167, 217, 0.4);
+  --color-extra-18: rgba(47, 72, 96, 0.12);
+  --color-extra-19: rgba(255, 247, 204, 0.45);
+  --color-extra-20: rgba(47, 72, 96, 0.18);
+  --color-extra-21: rgba(125, 167, 217, 0.22);
+  --color-extra-22: rgba(125, 167, 217, 0);
+  --color-extra-23: rgba(220, 238, 255, 0.11);
+  --color-extra-24: rgba(220, 238, 255, 0.24);
+  --color-extra-25: rgba(0, 0, 0, 0.08);
+  --color-extra-26: rgba(255, 247, 204, 0.16);
+  --color-extra-27: rgba(220, 238, 255, 0.16);
+  --color-extra-28: rgba(125, 167, 217, 0.8);
+  --color-extra-29: rgba(0, 0, 0, 0.13);
+  --color-extra-30: rgba(125, 167, 217, 0.38);
+  --color-extra-31: rgba(125, 167, 217, 0.18);
+  --color-extra-32: rgba(125, 167, 217, 0.34);
+  --color-extra-33: rgba(125, 167, 217, 0.15);
+  --color-extra-34: rgba(125, 167, 217, 0.1);
+  --color-extra-35: #405c77;
+  --color-extra-36: #6f8fb3;
+  --color-extra-37: #acc8e7;
+  --color-extra-38: rgba(255, 255, 255, 0.9);
+  --color-extra-39: rgba(220, 238, 255, 0.9);
+  --color-extra-40: rgba(47, 72, 96, 0.16);
+  --color-extra-41: rgba(255, 255, 255, 0.7);
+  --color-extra-42: rgba(47, 72, 96, 0.22);
+  --color-extra-43: rgba(47, 72, 96, 0.1);
+  --color-extra-44: rgba(47, 72, 96, 0.08);
+  --color-extra-45: #fff0a6;
+  --color-extra-46: rgba(125, 167, 217, 0.2);
+  --color-extra-47: rgba(125, 167, 217, 0.08);
+  --color-extra-48: rgba(125, 167, 217, 0.07);
+  --color-extra-49: #eef6ff;
+  --color-extra-50: #f8fbff;
+  --color-extra-51: #f7fbff;
+  --color-extra-52: rgba(255, 255, 255, 0.95);
+  --color-extra-53: rgba(255, 255, 255, 0.1);
+  --color-extra-54: rgba(220, 238, 255, 0.3);
+  --color-extra-55: rgba(255, 255, 255, 0.92);
+  --color-extra-56: rgba(220, 238, 255, 0.72);
+  --color-extra-57: #f4f8fd;
+  --color-extra-58: #e7f1fb;
+  --color-extra-59: rgba(255, 247, 204, 0.8);
+  --color-extra-60: rgba(47, 72, 96, 0.14);
+  --color-extra-61: rgba(47, 72, 96, 0.75);
+  --color-extra-62: #fff1a8;
+  --color-extra-63: #f6faff;
+  --color-extra-64: rgba(47, 72, 96, 0.2);
+  --color-extra-65: rgba(255, 247, 204, 0.28);
+  --color-extra-66: rgba(255, 247, 204, 0.12);
+  --color-extra-67: #f5faff;
+  --shadow-color: rgba(47, 72, 96, 0.15);
+  --color-extra-68: #486b8b;
+  --color-extra-69: rgba(255, 255, 255, 0.08);
+  --color-extra-70: rgba(47, 72, 96, 0.24);
+  --color-extra-71: #456783;
+  --color-extra-72: rgba(255, 247, 204, 0.15);
+  --color-extra-73: rgba(255, 255, 255, 0.94);
+  --color-extra-74: rgba(125, 167, 217, 0.35);
+  --color-extra-75: rgba(82, 145, 111, 0.55);
+  --color-extra-76: #24394d;
+  --color-extra-77: rgba(255, 255, 255, 0.16);
+  --color-extra-78: rgba(255, 247, 204, 0.18);
 }
 
 /* =========================
    BASE
 ========================= */
+/* ТЕМНА ТЕМА */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-dark: #e8edf2;
+    --color-light-blue: #26394d;
+    --color-blue: #8fb4df;
+    --color-yellow: #f1df88;
+    --color-white: #182635;
 
+    /* тут також перевизначаємо інші кольорові змінні */
+  }
+}
 *,
 *::before,
 *::after {
@@ -124,6 +149,9 @@ a {
   width: 100%;
 }
 
+/* =========================
+   HEADER
+========================= */
 /* =========================
    HEADER
 ========================= */
@@ -370,7 +398,7 @@ a {
 
   z-index: -1;
 
-  background-color: var(--overlay-blue-soft);
+  background-color: var(--color-extra-1);
 }
 
 .about-container {
@@ -423,7 +451,7 @@ a {
 
   box-shadow: var(--shadow);
 
-  border: 0.3rem solid var(--surface-glass);
+  border: 0.3rem solid var(--color-extra-2);
 }
 
 /* =========================
@@ -449,7 +477,7 @@ a {
 
   padding: 1rem 1.2rem;
 
-  background-color: var(--accent-strong);
+  background-color: var(--color-extra-3);
 
   border-radius: 1rem;
 
@@ -643,13 +671,13 @@ a {
   background:
     radial-gradient(
       circle at 10% 5%,
-      var(--accent-strong) 0%,
-      var(--transparent) 25%
+      var(--color-extra-4) 0%,
+      var(--color-extra-5) 25%
     ),
     linear-gradient(
       to bottom,
-      var(--overlay-blue-soft) 0%,
-      var(--surface-glass) 8rem
+      var(--color-extra-6) 0%,
+      var(--color-extra-7) 8rem
     );
   margin-top: -0.1rem;
 }
@@ -673,10 +701,10 @@ a {
 
   background: radial-gradient(
     circle,
-    var(--accent-strong) 0%,
-    var(--accent-soft) 25%,
-    var(--blue-border) 52%,
-    var(--transparent) 75%
+    var(--color-extra-8) 0%,
+    var(--color-extra-9) 25%,
+    var(--color-extra-10) 52%,
+    var(--color-extra-11) 75%
   );
 
   filter: blur(1rem);
@@ -699,10 +727,10 @@ a {
 
   background: radial-gradient(
     circle,
-    var(--blue-border) 0%,
-    var(--overlay-blue-soft) 38%,
-    var(--accent-soft) 58%,
-    var(--transparent) 78%
+    var(--color-extra-12) 0%,
+    var(--color-extra-13) 38%,
+    var(--color-extra-14) 58%,
+    var(--color-extra-15) 78%
   );
 
   filter: blur(1.2rem);
@@ -784,15 +812,15 @@ a {
 
   overflow: hidden;
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-16);
 
-  border: 0.1rem solid var(--blue-border);
+  border: 0.1rem solid var(--color-extra-17);
 
   border-radius: 1.7rem;
 
   box-shadow:
-    0 0.8rem 2rem var(--dark-shadow-soft),
-    inset 0 0 0 0.05rem var(--surface-glass);
+    0 0.8rem 2rem var(--color-extra-18),
+    inset 0 0 0 0.05rem var(--color-extra-2);
 
   backdrop-filter: blur(0.5rem);
 
@@ -819,9 +847,9 @@ a {
 
   background: radial-gradient(
     circle,
-    var(--accent-strong) 0%,
-    var(--accent-soft) 40%,
-    var(--transparent) 72%
+    var(--color-extra-3) 0%,
+    var(--color-extra-19) 40%,
+    var(--color-extra-5) 72%
   );
 
   filter: blur(0.4rem);
@@ -935,8 +963,8 @@ a {
   border-color: var(--color-blue);
 
   box-shadow:
-    0 1.2rem 2.5rem var(--dark-shadow-soft),
-    inset 0 0 0 0.05rem var(--surface-glass);
+    0 1.2rem 2.5rem var(--color-extra-20),
+    inset 0 0 0 0.05rem var(--color-extra-2);
 }
 
 /* =========================
@@ -1083,9 +1111,9 @@ a {
   background:
     radial-gradient(
       circle at 100% 0%,
-      var(--blue-border) 0%,
-      var(--blue-border) 18%,
-      var(--transparent) 42%
+      var(--color-extra-12) 0%,
+      var(--color-extra-21) 18%,
+      var(--color-extra-22) 42%
     ),
     var(--color-dark);
 }
@@ -1150,13 +1178,13 @@ a {
 
   overflow: hidden;
 
-  background-color: var(--blue-glow);
+  background-color: var(--color-extra-23);
 
-  border: 0.08rem solid var(--blue-glow);
+  border: 0.08rem solid var(--color-extra-24);
 
   border-radius: 1.3rem;
 
-  box-shadow: 0 0.5rem 1.3rem var(--black-shadow);
+  box-shadow: 0 0.5rem 1.3rem var(--color-extra-25);
 
   transition:
     transform var(--transition),
@@ -1182,8 +1210,8 @@ a {
 
   background: radial-gradient(
     circle,
-    var(--accent-soft) 0%,
-    var(--transparent) 72%
+    var(--color-extra-26) 0%,
+    var(--color-extra-5) 72%
   );
 
   pointer-events: none;
@@ -1223,11 +1251,11 @@ a {
 .subjects-item:hover {
   transform: translateY(-0.3rem);
 
-  background-color: var(--blue-glow);
+  background-color: var(--color-extra-27);
 
-  border-color: var(--blue-border);
+  border-color: var(--color-extra-28);
 
-  box-shadow: 0 0.9rem 1.8rem var(--black-shadow);
+  box-shadow: 0 0.9rem 1.8rem var(--color-extra-29);
 }
 
 .subjects-item:active {
@@ -1246,9 +1274,9 @@ a {
     background:
       radial-gradient(
         circle at 100% 0%,
-        var(--blue-border) 0%,
-        var(--blue-border) 16%,
-        var(--transparent) 36%
+        var(--color-extra-30) 0%,
+        var(--color-extra-31) 16%,
+        var(--color-extra-22) 36%
       ),
       var(--color-dark);
   }
@@ -1276,9 +1304,9 @@ a {
     background:
       radial-gradient(
         circle at 100% 0%,
-        var(--blue-border) 0%,
-        var(--blue-border) 15%,
-        var(--transparent) 32%
+        var(--color-extra-32) 0%,
+        var(--color-extra-33) 15%,
+        var(--color-extra-22) 32%
       ),
       var(--color-dark);
   }
@@ -1326,16 +1354,16 @@ a {
   background:
     radial-gradient(
       circle at 100% 0%,
-      var(--blue-border) 0%,
-      var(--blue-border) 18%,
-      var(--transparent) 34%
+      var(--color-extra-21) 0%,
+      var(--color-extra-34) 18%,
+      var(--color-extra-22) 34%
     ),
     linear-gradient(
       to bottom,
       var(--color-dark) 0%,
-      var(--blue-dark-2) 24%,
-      var(--blue-mid) 48%,
-      var(--blue-soft) 74%,
+      var(--color-extra-35) 24%,
+      var(--color-extra-36) 48%,
+      var(--color-extra-37) 74%,
       var(--color-light-blue) 100%
     );
 }
@@ -1396,15 +1424,15 @@ a {
 
   padding: 1.7rem;
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-38);
 
-  border: 0.1rem solid var(--overlay-blue-soft);
+  border: 0.1rem solid var(--color-extra-39);
 
   border-radius: 1.6rem;
 
   box-shadow:
-    0 0.8rem 2rem var(--dark-shadow-soft),
-    inset 0 0 0 0.05rem var(--white-soft);
+    0 0.8rem 2rem var(--color-extra-40),
+    inset 0 0 0 0.05rem var(--color-extra-41);
 
   backdrop-filter: blur(0.5rem);
 
@@ -1431,8 +1459,8 @@ a {
   border-color: var(--color-yellow);
 
   box-shadow:
-    0 1.1rem 2.4rem var(--dark-shadow-soft),
-    inset 0 0 0 0.05rem var(--surface-glass);
+    0 1.1rem 2.4rem var(--color-extra-42),
+    inset 0 0 0 0.05rem var(--color-extra-2);
 }
 
 /* =========================
@@ -1497,11 +1525,11 @@ a {
 
   background-color: var(--color-light-blue);
 
-  border: 0.06rem solid var(--dark-shadow-soft);
+  border: 0.06rem solid var(--color-extra-43);
 
   border-radius: 5rem;
 
-  box-shadow: inset 0 0.1rem 0.25rem var(--dark-shadow-soft);
+  box-shadow: inset 0 0.1rem 0.25rem var(--color-extra-44);
 }
 
 /* лимонне заповнення */
@@ -1521,7 +1549,7 @@ a {
   background: linear-gradient(
     90deg,
     var(--color-yellow),
-    var(--yellow-strong)
+    var(--color-extra-45)
   );
 
   transition:
@@ -1589,16 +1617,16 @@ a {
     background:
       radial-gradient(
         circle at 100% 0%,
-        var(--blue-border) 0%,
-        var(--blue-border) 15%,
-        var(--transparent) 30%
+        var(--color-extra-46) 0%,
+        var(--color-extra-47) 15%,
+        var(--color-extra-22) 30%
       ),
       linear-gradient(
         to bottom,
         var(--color-dark) 0%,
-        var(--blue-dark-2) 23%,
-        var(--blue-mid) 47%,
-        var(--blue-soft) 73%,
+        var(--color-extra-35) 23%,
+        var(--color-extra-36) 47%,
+        var(--color-extra-37) 73%,
         var(--color-light-blue) 100%
       );
   }
@@ -1632,16 +1660,16 @@ a {
     background:
       radial-gradient(
         circle at 100% 0%,
-        var(--blue-border) 0%,
-        var(--blue-border) 13%,
-        var(--transparent) 27%
+        var(--color-extra-31) 0%,
+        var(--color-extra-48) 13%,
+        var(--color-extra-22) 27%
       ),
       linear-gradient(
         to bottom,
         var(--color-dark) 0%,
-        var(--blue-dark-2) 22%,
-        var(--blue-mid) 46%,
-        var(--blue-soft) 72%,
+        var(--color-extra-35) 22%,
+        var(--color-extra-36) 46%,
+        var(--color-extra-37) 72%,
         var(--color-light-blue) 100%
       );
   }
@@ -1688,8 +1716,8 @@ a {
   background: linear-gradient(
     to bottom,
     var(--color-light-blue) 0%,
-    var(--surface-blue) 24%,
-    var(--surface-blue) 55%,
+    var(--color-extra-49) 24%,
+    var(--color-extra-50) 55%,
     var(--color-white) 100%
   );
 }
@@ -1778,7 +1806,7 @@ a {
 
   border-radius: 1.5rem;
 
-  box-shadow: 0 0.7rem 1.8rem var(--dark-shadow-soft);
+  box-shadow: 0 0.7rem 1.8rem var(--color-extra-18);
 
   transition:
     transform 300ms ease,
@@ -1793,7 +1821,7 @@ a {
 .hobbies-image:hover {
   transform: scale(1.025);
 
-  box-shadow: 0 1rem 2.3rem var(--dark-shadow-soft);
+  box-shadow: 0 1rem 2.3rem var(--color-extra-20);
 
   filter: saturate(1.05);
 }
@@ -1897,7 +1925,7 @@ a {
   background: linear-gradient(
     to bottom,
     var(--color-white) 0%,
-    var(--surface-blue) 40%,
+    var(--color-extra-51) 40%,
     var(--color-light-blue) 100%
   );
 }
@@ -1948,13 +1976,13 @@ a {
 
   overflow: hidden;
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-52);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-10);
 
   border-radius: 1.5rem;
 
-  box-shadow: 0 0.8rem 2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 2rem var(--color-extra-18);
 }
 
 /* =========================
@@ -1990,7 +2018,7 @@ a {
 
   text-align: left;
 
-  border-bottom: 0.08rem solid var(--white-faint);
+  border-bottom: 0.08rem solid var(--color-extra-53);
 }
 
 /* =========================
@@ -2004,7 +2032,7 @@ a {
 
   color: var(--color-dark);
 
-  border-bottom: 0.08rem solid var(--blue-border);
+  border-bottom: 0.08rem solid var(--color-extra-33);
 }
 
 /* =========================
@@ -2018,11 +2046,11 @@ a {
 }
 
 .books-table tbody tr:nth-child(even) {
-  background-color: var(--blue-glow);
+  background-color: var(--color-extra-54);
 }
 
 .books-table tbody tr:hover {
-  background-color: var(--accent-soft);
+  background-color: var(--color-extra-19);
 }
 
 /* =========================
@@ -2037,7 +2065,7 @@ a {
 
   border-radius: 0.7rem;
 
-  box-shadow: 0 0.4rem 1rem var(--dark-shadow-soft);
+  box-shadow: 0 0.4rem 1rem var(--color-extra-20);
 
   transition:
     transform 250ms ease,
@@ -2047,7 +2075,7 @@ a {
 .books-image:hover {
   transform: scale(1.05);
 
-  box-shadow: 0 0.8rem 1.5rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 1.5rem var(--color-extra-42);
 }
 
 /* =========================
@@ -2151,7 +2179,7 @@ a {
   background: linear-gradient(
     to bottom,
     var(--color-light-blue) 0%,
-    var(--surface-blue) 35%,
+    var(--color-extra-49) 35%,
     var(--color-white) 100%
   );
 }
@@ -2214,13 +2242,13 @@ a {
 
   padding: 1rem;
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-55);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-21);
 
   border-radius: 1.5rem;
 
-  box-shadow: 0 0.7rem 1.8rem var(--dark-shadow-soft);
+  box-shadow: 0 0.7rem 1.8rem var(--color-extra-18);
 
   transition:
     transform var(--transition),
@@ -2233,7 +2261,7 @@ a {
 
   border-color: var(--color-blue);
 
-  box-shadow: 0 1rem 2.2rem var(--dark-shadow-soft);
+  box-shadow: 0 1rem 2.2rem var(--color-extra-20);
 }
 
 /* =========================
@@ -2286,13 +2314,13 @@ a {
 
   padding: 2rem 1.5rem;
 
-  background-color: var(--overlay-blue-soft);
+  background-color: var(--color-extra-56);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-46);
 
   border-radius: 1.7rem;
 
-  box-shadow: 0 0.8rem 2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 2rem var(--color-extra-43);
 }
 
 /* =========================
@@ -2317,13 +2345,13 @@ a {
 .music-player {
   padding: 1.2rem;
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-38);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-31);
 
   border-radius: 1.2rem;
 
-  box-shadow: 0 0.5rem 1.2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.5rem 1.2rem var(--color-extra-44);
 
   transition:
     transform var(--transition),
@@ -2340,7 +2368,7 @@ a {
 
   border-color: var(--color-yellow);
 
-  box-shadow: 0 0.8rem 1.6rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 1.6rem var(--color-extra-18);
 }
 
 /* =========================
@@ -2472,8 +2500,8 @@ a {
   background: linear-gradient(
     to bottom,
     var(--color-white) 0%,
-    var(--surface-blue) 35%,
-    var(--surface-blue) 100%
+    var(--color-extra-57) 35%,
+    var(--color-extra-58) 100%
   );
 }
 
@@ -2532,13 +2560,13 @@ a {
 
   padding: 1rem 1rem 1.4rem;
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-55);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-21);
 
   border-radius: 1.6rem;
 
-  box-shadow: 0 0.8rem 2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 2rem var(--color-extra-18);
 
   transition:
     transform 300ms ease,
@@ -2562,7 +2590,7 @@ a {
 
   color: var(--color-yellow);
 
-  text-shadow: 0 0 0.7rem var(--accent-strong);
+  text-shadow: 0 0 0.7rem var(--color-extra-59);
 
   transition:
     transform 350ms ease,
@@ -2586,8 +2614,8 @@ a {
 
   background: radial-gradient(
     circle,
-    var(--blue-border) 0%,
-    var(--transparent) 70%
+    var(--color-extra-31) 0%,
+    var(--color-extra-22) 70%
   );
 
   pointer-events: none;
@@ -2602,7 +2630,7 @@ a {
 
   border-color: var(--color-blue);
 
-  box-shadow: 0 1.2rem 2.6rem var(--dark-shadow-soft);
+  box-shadow: 0 1.2rem 2.6rem var(--color-extra-20);
 }
 
 .movies-card:hover::before {
@@ -2621,7 +2649,7 @@ a {
 
   border-radius: 1.15rem;
 
-  box-shadow: 0 0.5rem 1.4rem var(--dark-shadow-soft);
+  box-shadow: 0 0.5rem 1.4rem var(--color-extra-60);
 
   transition:
     transform 350ms ease,
@@ -2656,7 +2684,7 @@ a {
 
   font-size: 0.95rem;
 
-  color: var(--text-muted);
+  color: var(--color-extra-61);
 }
 
 /* =========================
@@ -2679,7 +2707,7 @@ a {
 
   border-radius: 999rem;
 
-  box-shadow: 0 0.3rem 0.8rem var(--accent-soft);
+  box-shadow: 0 0.3rem 0.8rem var(--color-extra-19);
 
   transition:
     transform 250ms ease,
@@ -2689,7 +2717,7 @@ a {
 .movies-card:hover .movies-rating {
   transform: translateY(-0.1rem);
 
-  background-color: var(--yellow-strong);
+  background-color: var(--color-extra-62);
 }
 
 /* =========================
@@ -2777,8 +2805,8 @@ a {
 
   background: linear-gradient(
     to bottom,
-    var(--surface-blue) 0%,
-    var(--surface-blue) 45%,
+    var(--color-extra-58) 0%,
+    var(--color-extra-63) 45%,
     var(--color-white) 100%
   );
 }
@@ -2842,9 +2870,9 @@ a {
 
   border-radius: 1.7rem;
 
-  box-shadow: 0 0.8rem 2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 2rem var(--color-extra-40);
 
-  border: 0.12rem solid var(--blue-border);
+  border: 0.12rem solid var(--color-extra-10);
 
   transition:
     transform 300ms ease,
@@ -2855,7 +2883,7 @@ a {
 .sport-image:hover {
   transform: scale(1.02);
 
-  box-shadow: 0 1.2rem 2.6rem var(--dark-shadow-soft);
+  box-shadow: 0 1.2rem 2.6rem var(--color-extra-64);
 
   filter: saturate(1.04);
 }
@@ -2877,7 +2905,7 @@ a {
 
   border-radius: 1.7rem;
 
-  box-shadow: 0 0.8rem 2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 2rem var(--color-extra-40);
 
   transition:
     transform var(--transition),
@@ -2901,9 +2929,9 @@ a {
 
   background: radial-gradient(
     circle,
-    var(--accent-soft) 0%,
-    var(--accent-soft) 45%,
-    var(--transparent) 72%
+    var(--color-extra-65) 0%,
+    var(--color-extra-66) 45%,
+    var(--color-extra-5) 72%
   );
 
   pointer-events: none;
@@ -2947,7 +2975,7 @@ a {
 .sport-info:hover {
   transform: translateY(-0.35rem);
 
-  box-shadow: 0 1.2rem 2.6rem var(--dark-shadow-soft);
+  box-shadow: 0 1.2rem 2.6rem var(--color-extra-42);
 }
 
 /* =========================
@@ -3051,7 +3079,7 @@ a {
   background: linear-gradient(
     to bottom,
     var(--color-white) 0%,
-    var(--surface-blue) 45%,
+    var(--color-extra-67) 45%,
     var(--color-light-blue) 100%
   );
 }
@@ -3146,7 +3174,7 @@ a {
   scroll-snap-align: center;
   scroll-snap-stop: always;
 
-  border: 0.1rem solid var(--blue-border);
+  border: 0.1rem solid var(--color-extra-10);
 
   border-radius: 1.7rem;
 
@@ -3199,7 +3227,7 @@ a {
 
   color: var(--color-dark);
 
-  background-color: var(--accent-strong);
+  background-color: var(--color-extra-3);
 
   border-radius: 50%;
 
@@ -3217,7 +3245,7 @@ a {
 .travel-item:hover {
   transform: translateY(-0.3rem);
 
-  box-shadow: 0 1.2rem 2.5rem var(--dark-shadow-soft);
+  box-shadow: 0 1.2rem 2.5rem var(--color-extra-64);
 }
 
 .travel-item:hover .travel-image {
@@ -3329,7 +3357,7 @@ a {
   background: linear-gradient(
     to bottom,
     var(--color-light-blue) 0%,
-    var(--surface-blue) 45%,
+    var(--color-extra-49) 45%,
     var(--color-white) 100%
   );
 }
@@ -3404,11 +3432,11 @@ a {
 
   color: var(--color-white);
 
-  background: linear-gradient(145deg, var(--color-dark), var(--blue-dark-2));
+  background: linear-gradient(145deg, var(--color-dark), var(--color-extra-68));
 
   border-radius: 1.7rem;
 
-  box-shadow: 0 0.8rem 2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 2rem var(--color-extra-20);
 
   transition:
     transform 300ms ease,
@@ -3436,7 +3464,7 @@ a {
   font-size: 4rem;
   font-weight: 700;
 
-  color: var(--white-faint);
+  color: var(--color-extra-69);
 }
 
 .projects-card::after {
@@ -3450,7 +3478,7 @@ a {
   width: 9rem;
   height: 9rem;
 
-  border: 1rem solid var(--accent-soft);
+  border: 1rem solid var(--color-extra-66);
 
   border-radius: 50%;
 }
@@ -3480,7 +3508,7 @@ a {
 .projects-card:hover {
   transform: translateY(-0.4rem);
 
-  box-shadow: 0 1.2rem 2.6rem var(--dark-shadow-soft);
+  box-shadow: 0 1.2rem 2.6rem var(--color-extra-70);
 }
 
 /* =========================
@@ -3495,7 +3523,7 @@ a {
   background: linear-gradient(
     to bottom,
     var(--color-white) 0%,
-    var(--surface-blue) 50%,
+    var(--color-extra-50) 50%,
     var(--color-light-blue) 100%
   );
 }
@@ -3508,13 +3536,13 @@ a {
 
   padding: 2.5rem 1.5rem;
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-55);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-46);
 
   border-radius: 1.8rem;
 
-  box-shadow: 0 0.9rem 2.2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.9rem 2.2rem var(--color-extra-18);
 }
 
 .goals-title {
@@ -3583,7 +3611,7 @@ a {
   margin: 0;
 
   border: 0;
-  border-top: 0.07rem solid var(--blue-border);
+  border-top: 0.07rem solid var(--color-extra-10);
 }
 
 /* =========================
@@ -3598,7 +3626,7 @@ a {
   background: linear-gradient(
     to bottom,
     var(--color-light-blue) 0%,
-    var(--surface-blue) 100%
+    var(--color-extra-49) 100%
   );
 }
 
@@ -3647,13 +3675,13 @@ a {
 
   color: var(--color-dark);
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-38);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-31);
 
   border-radius: 1.4rem;
 
-  box-shadow: 0 0.5rem 1.3rem var(--dark-shadow-soft);
+  box-shadow: 0 0.5rem 1.3rem var(--color-extra-44);
 
   transition:
     transform 250ms ease,
@@ -3674,7 +3702,7 @@ a {
 .facts-item:hover {
   transform: translateY(-0.25rem);
 
-  box-shadow: 0 0.8rem 1.7rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 1.7rem var(--color-extra-18);
 }
 
 /* =========================
@@ -3688,7 +3716,7 @@ a {
 
   background: linear-gradient(
     to bottom,
-    var(--surface-blue) 0%,
+    var(--color-extra-49) 0%,
     var(--color-white) 100%
   );
 }
@@ -3737,11 +3765,11 @@ a {
 
   overflow: hidden;
 
-  background: linear-gradient(145deg, var(--color-dark), var(--blue-dark-2));
+  background: linear-gradient(145deg, var(--color-dark), var(--color-extra-71));
 
   border-radius: 1.6rem;
 
-  box-shadow: 0 0.8rem 2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.8rem 2rem var(--color-extra-40);
 }
 
 .quotes-item::before {
@@ -3755,7 +3783,7 @@ a {
   font-size: 7rem;
   line-height: 1;
 
-  color: var(--accent-soft);
+  color: var(--color-extra-72);
 }
 
 .quotes-text {
@@ -3829,13 +3857,13 @@ a {
 
   padding: 2rem 1.5rem;
 
-  background-color: var(--surface-glass);
+  background-color: var(--color-extra-73);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-46);
 
   border-radius: 1.8rem;
 
-  box-shadow: 0 0.9rem 2.2rem var(--dark-shadow-soft);
+  box-shadow: 0 0.9rem 2.2rem var(--color-extra-18);
 }
 
 .contacts-field {
@@ -3864,9 +3892,9 @@ a {
 
   color: var(--color-dark);
 
-  background-color: var(--surface-blue);
+  background-color: var(--color-extra-50);
 
-  border: 0.08rem solid var(--blue-border);
+  border: 0.08rem solid var(--color-extra-74);
 
   border-radius: 0.9rem;
 
@@ -3885,13 +3913,13 @@ a {
 
   background-color: var(--color-white);
 
-  box-shadow: 0 0 0 0.2rem var(--blue-border);
+  box-shadow: 0 0 0 0.2rem var(--color-extra-31);
 }
 
 .contacts-input:valid,
 .contacts-textarea:valid,
 .contacts-select:valid {
-  border-color: var(--green-accent);
+  border-color: var(--color-extra-75);
 }
 
 .contacts-textarea {
@@ -3939,7 +3967,7 @@ a {
 
   cursor: pointer;
 
-  box-shadow: 0 0.5rem 1rem var(--dark-shadow-soft);
+  box-shadow: 0 0.5rem 1rem var(--color-extra-18);
 
   transition:
     transform 200ms ease,
@@ -3950,9 +3978,9 @@ a {
 .contacts-button:hover {
   transform: translateY(-0.15rem);
 
-  background-color: var(--yellow-strong);
+  background-color: var(--color-extra-45);
 
-  box-shadow: 0 0.7rem 1.3rem var(--dark-shadow-soft);
+  box-shadow: 0 0.7rem 1.3rem var(--color-extra-40);
 }
 
 .contacts-button:active {
@@ -3970,7 +3998,7 @@ a {
 
   color: var(--color-white);
 
-  background: linear-gradient(145deg, var(--color-dark), var(--blue-deep));
+  background: linear-gradient(145deg, var(--color-dark), var(--color-extra-76));
 }
 
 .footer-content {
@@ -4023,9 +4051,9 @@ a {
 
   color: var(--color-white);
 
-  background-color: var(--white-faint);
+  background-color: var(--color-extra-69);
 
-  border: 0.08rem solid var(--white-faint);
+  border: 0.08rem solid var(--color-extra-77);
 
   border-radius: 50%;
 
@@ -4037,7 +4065,7 @@ a {
 .footer-socials-link:hover {
   transform: translateY(-0.2rem);
 
-  background-color: var(--accent-soft);
+  background-color: var(--color-extra-78);
 }
 
 .footer-top-link {
@@ -4061,7 +4089,7 @@ a {
 .footer-top-link:hover {
   transform: translateY(-0.15rem);
 
-  background-color: var(--yellow-strong);
+  background-color: var(--color-extra-45);
 }
 
 .footer-copyright {

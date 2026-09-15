@@ -40,48 +40,6 @@
 }
 
 /* =========================
-   DARK THEME
-   Світлі блоки стають темними,
-   темні — світлими.
-   Змінюються ТІЛЬКИ змінні.
-========================= */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Інверсія основної палітри */
-    --color-dark: #e8f1fa;
-    --color-light-blue: #24394d;
-    --color-blue: #8fb4df;
-    --color-yellow: #e4d076;
-    --color-white: #172635;
-
-    /* Додаткові відтінки */
-    --blue-dark-2: #d6e5f3;
-    --blue-mid: #9dbce0;
-    --blue-soft: #405b73;
-    --blue-deep: #f0f6fb;
-    --surface-blue: #203244;
-    --yellow-strong: #f0dc7e;
-    --green-accent: rgba(178, 179, 157, 0.72);
-
-    /* Прозорі поверхні та контраст */
-    --overlay-blue-soft: rgba(23, 38, 53, 0.82);
-    --surface-glass: rgba(28, 45, 61, 0.94);
-    --accent-strong: rgba(228, 208, 118, 0.92);
-    --accent-soft: rgba(228, 208, 118, 0.16);
-    --blue-border: rgba(143, 180, 223, 0.38);
-    --blue-glow: rgba(143, 180, 223, 0.15);
-    --dark-shadow-soft: rgba(0, 0, 0, 0.28);
-    --black-shadow: rgba(0, 0, 0, 0.28);
-    --white-soft: rgba(232, 241, 250, 0.78);
-    --white-faint: rgba(232, 241, 250, 0.12);
-    --text-muted: rgba(232, 241, 250, 0.74);
-    --transparent: rgba(23, 38, 53, 0);
-
-    --shadow-color: rgba(0, 0, 0, 0.28);
-  }
-}
-
-/* =========================
    BASE
 ========================= */
 
